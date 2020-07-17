@@ -1,0 +1,21 @@
+{
+  "name": "pay-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:re": "bsb -clean-world -make-world -w",
+    "dev": "nodemon src/App.bs.js"
+  },
+  "dependencies": {
+    "@glennsl/bs-json": "^5.0.2",
+    "@paypal/payouts-sdk": "^1.0.0",
+    "bs-platform": "^8.0.3",
+    "decco": "^1.2.1",
+    "serbet": "^0.4.0"
+  },
+  "devDependencies": {
+    "bs-let": "^0.1.16",
+    "nodemon": "^2.0.4"
+  }
+}

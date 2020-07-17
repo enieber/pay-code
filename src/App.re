@@ -1,0 +1,1 @@
+let app = Serbet.application([HelloJson.endpoint, Home.endpoint]);
