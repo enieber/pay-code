@@ -1,17 +1,19 @@
 open Async;
-open Serbet;
 open Serbet.Endpoint;
 
 [@decco]
 type body_out = {message: string};
 
 let endpoint =
-  Serbet.jsonEndpoint({
+  Serbet.endpoint({
     verb: GET,
-    path: "/json",
-    body_out_encode,
+    path: "/",
     handler: (_req) => {
-      {message: "Bom dia" } |> async;
+      let response = {message: "Bom dia" }
+      response 
+        -> body_out_encode
+        -> OkJson 
+        -> async;
     },
   });
 
